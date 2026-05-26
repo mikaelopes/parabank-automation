@@ -4,8 +4,6 @@
   "main": "index.js",
   "scripts": {
     "test": "playwright test",
-    "test:manual": "playwright test tests/manual",
-    "test:ai": "playwright test tests/ai-generated",
     "test:report": "playwright show-report",
     "lint": "biome check pages/ tests/ fixtures/",
     "format": "biome check --write pages/ tests/ fixtures/"
