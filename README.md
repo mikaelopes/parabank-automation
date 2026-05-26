@@ -68,4 +68,4 @@ npm run format    # auto-fix
 
 ## Test Credentials
 
-The ParaBank demo accepts any non-empty credentials. Default: `john` / `demo`.
+Default: `john` / `demo`.
