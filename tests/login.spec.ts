@@ -1,6 +1,6 @@
 import { test } from '@playwright/test';
-import { USERS } from '../../fixtures/users';
-import { LoginPage } from '../../pages/LoginPage';
+import { USERS } from '../fixtures/users';
+import { LoginPage } from '../pages/LoginPage';
 
 test.describe('Login', () => {
   let loginPage: LoginPage;
