@@ -15,11 +15,9 @@ test.describe('Login', () => {
     await loginPage.expectLoggedIn();
   });
 
-  // ParaBank demo accepts any non-empty credentials — no real auth gate.
-  // In production this test would assert a 401 error message from the server.
-  test('demo environment accepts any non-empty credentials', async () => {
+  test('error shown when invalid credentials', async () => {
     await loginPage.login(USERS.invalid.username, USERS.invalid.password);
-    await loginPage.expectLoggedIn();
+    await loginPage.expectLoginError();
   });
 
   test('error shown when username is empty', async () => {

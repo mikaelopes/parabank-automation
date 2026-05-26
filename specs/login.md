@@ -25,15 +25,13 @@
 3. Click `login-button`
 **Expected:** URL contains "overview" and `account-table` is visible
 
-### TC-LGN-002: Demo environment accepts any non-empty credentials
-**Category:** Known Behavior
-> ParaBank's shared demo accepts any non-empty credentials — no real auth gate.
-> In production this test would assert a 401 error message.
+### TC-LGN-002: Error shown when invalid credentials
+**Category:** Negative
 **Steps:**
-1. Fill `username-input` with "notarealuser"
-2. Fill `password-input` with "notarealpassword"
+1. Fill `username-input` with "notauser"
+2. Fill `password-input` with "wrongpass"
 3. Click `login-button`
-**Expected:** URL contains "overview" and `account-table` is visible
+**Expected:** `error-message` is visible
 
 ### TC-LGN-003: Error shown when username is empty
 **Category:** Negative

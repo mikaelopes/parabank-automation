@@ -70,7 +70,6 @@ One spec per feature in `tests/manual/<feature>.spec.ts`. See `tests/manual/tran
 
 | Behavior | Detail |
 |----------|--------|
-| Any non-empty login works | Shared demo accepts any credentials — no real auth gate |
 | Empty fields → server error | Submitting empty amount returns a generic server error, not inline validation |
 | Angular error spans never fire | `<p id="amount.errors">` stays hidden — server validates instead |
 | `baseURL` trailing slash | `goto()` paths must NOT start with `/` |
