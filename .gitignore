@@ -4,4 +4,4 @@ playwright-report/
 test-results/
 .playwright-mcp/
 .env
-.claude/settings.local.json
+.claude/
