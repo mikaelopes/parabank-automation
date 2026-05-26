@@ -14,8 +14,8 @@ End-to-end test suite for [ParaBank](https://parabank.parasoft.com/parabank/), a
 
 ```
 ├── pages/               Page Object Model — one class per page
-├── tests/manual/        Hand-written specs (source-controlled)
-├── specs/               Human-authored test case descriptions
+├── tests/               Spec files — hand-written or generated via /automate
+├── specs/               Test case descriptions used as input for /automate
 ├── fixtures/            Shared test data
 ├── biome.json           Linter + formatter config
 └── playwright.config.ts
@@ -42,11 +42,8 @@ npx playwright install chromium
 # All tests
 npm test
 
-# Manual specs only
-npm run test:manual
-
 # Single spec
-npx playwright test tests/manual/transfer.spec.ts --reporter=list
+npx playwright test tests/transfer.spec.ts --reporter=list
 
 # HTML report
 npm run test:report
@@ -63,7 +60,7 @@ npm run format    # auto-fix
 
 **Page Object Model** — one class per page with `readonly` locators, typed action methods, and `expect*()` assertion methods. No `expect()` in action methods.
 
-**Spec-first workflow** — each feature starts as a human-authored `specs/*.md` file describing elements and test cases. The `/automate` command in Claude Code reads the spec, browses the live page to discover locators, then generates the page object and test file.
+**Two ways to create tests** — write a spec directly in `tests/` by hand, or author a `specs/*.md` file describing the page elements and test cases and run `/automate specs/<feature>.md` in Claude Code. The skill browses the live page, resolves locators, then generates the page object and test file in `tests/`.
 
 **Fixture-driven data** — all test data lives in `fixtures/users.ts`. No hard-coded strings in spec files.
 

@@ -1,7 +1,7 @@
 import { test } from '@playwright/test';
-import { TRANSFER, USERS } from '../../fixtures/users';
-import { LoginPage } from '../../pages/LoginPage';
-import { TransferPage } from '../../pages/TransferPage';
+import { TRANSFER, USERS } from '../fixtures/users';
+import { LoginPage } from '../pages/LoginPage';
+import { TransferPage } from '../pages/TransferPage';
 
 test.describe('Fund Transfer', () => {
   let transferPage: TransferPage;

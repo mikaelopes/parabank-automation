@@ -1,7 +1,7 @@
 import { test } from '@playwright/test';
-import { BILL_PAY, USERS } from '../../fixtures/users';
-import { BillPayPage } from '../../pages/BillPayPage';
-import { LoginPage } from '../../pages/LoginPage';
+import { BILL_PAY, USERS } from '../fixtures/users';
+import { BillPayPage } from '../pages/BillPayPage';
+import { LoginPage } from '../pages/LoginPage';
 
 test.describe('Bill Payment', () => {
   let billPayPage: BillPayPage;

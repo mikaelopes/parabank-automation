@@ -11,7 +11,7 @@ Playwright + TypeScript test suite against [ParaBank](https://parabank.parasoft.
 
 ```
 ├── pages/               Page Object Model — one class per page
-├── tests/manual/        Hand-written + agent-generated specs (source-controlled)
+├── tests/               Spec files — hand-written or generated via /automate
 ├── specs/               Human-authored test case descriptions (see specs/README.md)
 ├── fixtures/            Shared test data (users, amounts, payee info)
 └── playwright.config.ts
@@ -49,7 +49,7 @@ One class per page in `pages/<Name>Page.ts`. See `pages/TransferPage.ts` as the 
 
 ## Test File Conventions
 
-One spec per feature in `tests/manual/<feature>.spec.ts`. See `tests/manual/transfer.spec.ts` as the canonical example.
+One spec per feature in `tests/<feature>.spec.ts`. See `tests/transfer.spec.ts` as the canonical example.
 
 - One `describe` block per file, named after the feature
 - `beforeEach`: login first (if auth required), then navigate
